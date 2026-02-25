@@ -1,0 +1,14 @@
+name: local-obstacle-avoidance-service
+version: 0.1.0
+description: Real-time local obstacle avoidance using depth images and Dynamic Window Approach
+
+requires:
+  gpu: false
+
+deploy:
+  image: tidybot/local-obstacle-avoidance-service:0.1.0
+  port: 8007
+  health: /health
+  ready_timeout: 120
+
+client: client.py
